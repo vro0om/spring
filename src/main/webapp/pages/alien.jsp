@@ -7,6 +7,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-notHome ${name}  ${add}
+alien ${kik.aid}  ${kik.name} ${kik.status}
 </body>
 </html>

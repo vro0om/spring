@@ -18,11 +18,22 @@ public class NotHomeController {
 	}
 	
 	@RequestMapping("mvHome")
-	public ModelAndView mvHome(@RequestParam("name") String myName)
+	public ModelAndView mvHome(@RequestParam("name") String myName, String add)
 	{
 		ModelAndView mv = new ModelAndView();
 		mv.addObject("name", myName);
+		mv.addObject("add", add);
 		mv.setViewName("notHome");
+		return mv;
+	}
+	
+	@RequestMapping("al")
+	public ModelAndView alienResponse(Alien alien)
+	{
+		ModelAndView mv = new ModelAndView();
+		
+		mv.addObject("kik", alien);
+		mv.setViewName("alien");
 		return mv;
 	}
 	
